@@ -46,8 +46,28 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	UFUNCTION(BlueprintCallable)
-	void getDamage(float damage) {
+	void giveDamage(float damage) {
 		hp -= damage;
+	}
+
+	UFUNCTION(BlueprintCallable)
+	float getMaxHP() {
+		return max_hp;
+	}
+
+	UFUNCTION(BlueprintCallable)
+	float getHP() {
+		return hp;
+	}
+
+	UFUNCTION(BlueprintCallable)
+	float getAttack() {
+		return atk;
+	}
+
+	UFUNCTION(BlueprintCallable)
+	float getSpeed() {
+		return speed;
 	}
 
 	UFUNCTION(BlueprintCallable)
