@@ -14,19 +14,6 @@ UPlayerStatComponent::UPlayerStatComponent()
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
 
-	hp = 0.0f;
-	max_hp = 0.0f;
-	atk = 0.0f;
-	speed = 0.0f;
-
-	hp_lvl = 0;
-	atk_lvl = 0;
-	speed_lvl = 0;
-
-	level_point = 0;
-
-	updateStat();
-
 	// ...
 }
 
@@ -35,6 +22,14 @@ UPlayerStatComponent::UPlayerStatComponent()
 void UPlayerStatComponent::BeginPlay()
 {
 	Super::BeginPlay();
+
+	hp_lvl = 0;
+	atk_lvl = 0;
+	speed_lvl = 0;
+
+	level_point = 0;
+
+	updateStat();
 }
 
 
