@@ -56,6 +56,11 @@ public:
 	}
 
 	UFUNCTION(BlueprintCallable)
+	float getHP() {
+		return hp;
+	}
+
+	UFUNCTION(BlueprintCallable)
 	float getAttack() {
 		return atk;
 	}
