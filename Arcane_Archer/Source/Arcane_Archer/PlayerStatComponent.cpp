@@ -14,14 +14,10 @@ UPlayerStatComponent::UPlayerStatComponent()
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
 
-	// ...
-}
-
-
-// Called when the game starts
-void UPlayerStatComponent::BeginPlay()
-{
-	Super::BeginPlay();
+	hp = 0.0f;
+	max_hp = 0.0f;
+	atk = 0.0f;
+	speed = 0.0f;
 
 	hp_lvl = 0;
 	atk_lvl = 0;
@@ -30,6 +26,15 @@ void UPlayerStatComponent::BeginPlay()
 	level_point = 0;
 
 	updateStat();
+
+	// ...
+}
+
+
+// Called when the game starts
+void UPlayerStatComponent::BeginPlay()
+{
+	Super::BeginPlay();
 }
 
 
